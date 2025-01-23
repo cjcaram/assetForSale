@@ -84,3 +84,18 @@ rightArrow.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % images.length; // Wrap around to first image
   showImage(currentIndex);
 });
+
+function toggleExtraInfo() {
+  const extraInfo = document.querySelector('.extra-info');
+  const toggleButton = document.querySelector('.extra-info-toggle');
+  
+  if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
+    extraInfo.style.display = 'block';
+    toggleButton.classList.add('open');
+    toggleButton.querySelector('span').textContent = "Ocultar detalles";
+  } else {
+    extraInfo.style.display = 'none';
+    toggleButton.classList.remove('open');
+    toggleButton.querySelector('span').textContent = "Mostrar mas detalles";
+  }
+}

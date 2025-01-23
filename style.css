@@ -69,4 +69,32 @@ span {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   }
   
-  
+.extra-info-toggle {
+  cursor: pointer;
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra-info-toggle .arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Initially hide the extra info section */
+.extra-info {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.extra-info-toggle.open .arrow {
+  transform: rotate(180deg); /* Rotate the arrow when section is expanded */
+}
