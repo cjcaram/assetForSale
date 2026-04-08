@@ -1,129 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>House for Sale</title>
+  <title>Casa en venta en La Reserva 1 | Los Nogales</title>
+  <meta
+    name="description"
+    content="Casa a estrenar en La Reserva 1, Los Nogales. Terreno de 450 m2, 108 m2 cubiertos, 50 m2 semicubiertos y galería cochera para 2 vehículos."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hermosa Casa en venta - Country Reservas 1</h1>
-  </header>
-  <main>
-    <section class="details">
-      <h2>Descripción</h2>
-      <p>En Venta casa a estrenar en Country LA RESERVA 1 , los Nogales, lote V03.<br>
-        terreno con una superficie de 450.00 m2 en la parte superior de lomada con vistas de 360º de su entorno.<br>
-        Casa desarrollada en Planta Baja. en la cual se encuentra el Acceso, Estudio/Dorm., Toilette, Estar Comedor, <br>
-        Cocina, Lavadero y Tender, 2 Dormitorios, Antebaño y Baño (posible de anexar un 3º dormitorio), <br>
-        Galeria/ Cochera para 2 vehículos con asador completo.</p>
-      <p>Superficie cubierta de 108 m2 y superficie semicubierta de 50 m2.</p>
-      <p><strong>Ubicación:</strong> A 10 minutos del centro sobre ruta 9 km 1304.</p>
-      <p><strong>Contacto:</strong> Cristian Caram. <a href="mailto:contact@realestate.com">cjcaram@gmail.com</a> | 3878303068 </p>
-      <p><strong>Precio:</strong> u$d 145000</p>
-    </section>
-    <div class="extra-info-toggle" onclick="toggleExtraInfo()">
-      <span>Mostrar detalles</span>
-      <span class="arrow">&#9660;</span>  <!-- Down arrow -->
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#inicio">La Reserva 1</a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#resumen">Resumen</a>
+        <a href="#detalles">Detalles</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
-    <section class="extra-info">
-      <h2>Mas detalles</h2>
-      <p><strong>Estructura:</strong> De hormigón armado sismo resistente según disposiciones del Reglamento CIRSOC 201. Sistema de Bases / vigas encadenado / columnas / vigas superiores / losas.</p>
-      <p><strong>Cubierta de techo:</strong> se realizó en chapa sinusoidal galvanizadas cal 25 apoyada sobre correas de perfil C laminado en frío fijado con tornillos autoperforantes y canaletas y caños de bajadas del mismo material. Aislante térmico bajo chapa de lana de vidrio de 2´con aluminio.</p>
-      <p><strong>Mampostería:</strong> los muros son de ladrillos cerámicos huecos (18x18x33, 12x18x33 y 8x18x33 cm.) sector social/ muros de bloques Brimax (18x20x60 cm.) por sus características estructurales, acústicas, térmicas, hidrófugas en sector dormitorios. El remate de apretada se realizó con ladrillo común macizo en nivel horizontal que ocultara todo el techo de chapa.</p>
-      <p><strong>Cielorrasos:</strong> suspendidos y aplicados de yeso, con doble aislación de lana de vidrio de 2' con aluminio.</p>
-      <p><strong>Revoques Exteriores:</strong> envolventes con revoques con un previo planchado cementicio + hidrófugo, revoques finos con premezclas. </p>
-      <p><strong>Revoques Interiores:</strong> Los revoques interiores son gruesos y finos de premezclas.</p>
-      <p><strong>Pisos y revestimiento:</strong> Pisos en Estar comedor, pasillos interiores, sectores de cocina y Dormitorios de porcelanato San Lorenzo 60x60 cm de 1º. El toilettes será revestido hasta 1 m con una terminación de guarda. En baño se realizó el revestimiento de piso a techo con detalle perimetral de guarda, Antebaño no revestido. <br>
-        En lavadero y cocina se emplearon revestimientos porcelanato San Lorenzo esmaltados de 1º blancos 60x60 cm.</p>
-      <p><strong>Instalación Sanitaria:</strong> Materiales agua de 1° calidad, sistema termofusión. Se colocó un tanque cisterna (600l) y elevado (1.100l) tinaco con bomba elevadora y sistema automático de flotante. <br>
-          Se dejó previsto la instalación de termotanque solar en el techo.<br>
-          La instalación de cloaca se realizó con biodigestor 900 lt y pozo absorbente.</p>  
-      <p><strong>Lozas y griferías:</strong> Baños con artefactos Ferrum línea Bari Blanco. Las griferías de baños son FV Alerce / Puelo. En cocina monocomando FV Puelo.</p>
-      <p><strong>Electricidad:</strong> Totalmente embutidas, con materiales de 1° calidad. AA con instalación individual, teléfono y tv.<br>
-        Tablero: Tablero gabinete embutido. (llave general / Disyuntor Diferencial Trifásico, Llaves seccionales bifásicas). Con Circuitos independientes para cada sector y artefactos principales (AA, Termotanque, Anafe, Horno) <br>
-        Cables:  Kalop según Normas IRAM 2183.<br>
-        Accesorios de salida: Las llaves y tomacorrientes de luz son Kalop Civil<br>
-        Se canalizó toda la casa para que sea APTA para DOMÓTICA (sistema inteligente con cámaras, seguridad, control de puertas, ventanas, electrodomésticos, iluminación, etc.)<br>
-        Circuito con temporizador digital programable para iluminación exterior. Apliques bidireccionales instalados.</p>
-      <p><strong>Instalación de gas:</strong> Se ejecutaron según normativas vigentes GASNOR <br>
-        Se dejó prevista cañería de gas envasado con sistema termofusión.</p>
-      <p><strong>Pinturas de cielorrasos:</strong> látex Alba, s/ planchado de enduido.</p>
-      <p><strong>Pintura para muros interiores:</strong> látex interior Alba s/ planchado de enduido.</p>
-      <p><strong>Pintura para muros exteriores: </strong> látex exterior Duralba.</p>
-      <p><strong>Pinturas sobre puertas interiores:</strong> esmalte sintético Alba de acabado Brillante.</p>
-      <p><strong>Carpintería Exterior:</strong> Las puertas y ventanas de aluminio con tapajuntas prepintado de negro, en caso de puertas ventana vidrio templado.</p>
-      <p><strong>Carpintería Interior:</strong> es de madera, con marco de madera en puertas placas marca Oblak.</p>
-      <p><strong>Muebles de cocina:</strong> Mueble diseñado en melamina sobre MDF. Con sistema de herrajes de cierre suave, perfil manija tirador.</p>
-      <p><strong>Mármoles</strong> Mesada de cocina / desayunador / asador realizado en Granito Negro Boreal.<br>
-        Mesadas de Baño / Antebaño / Toilette realizada en mármol New Beige.</p>
-      <p><strong>Aires Acondicionados:</strong> Preinstalación de cañerías embutidas para unidad interior - unidad exterior de equipos split y desagües correspondientes de condensadores en ambientes principales.</p>
-      <p><strong>Artefactos:</strong> Termotanque eléctrico de 85 l instalado, Anafe y horno eléctrico instalado. <br>
-        Queda prevista la instalación de la cañería de gas por si se desea cambiar artefactos de a Gas envasado. <br>
-        Está Previsto Agua/Cloaca en el sector del contrafrente por si se desea construir piscina. </p>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Casa a estrenar en venta</p>
+          <h1>Diseño contemporáneo, vistas abiertas y una ubicación estratégica en Los Nogales</h1>
+          <p class="lead">
+            Propiedad desarrollada en planta baja dentro de Country La Reserva 1, implantada sobre un lote de 450 m2
+            en la parte superior de una lomada con vistas abiertas de 360°.
+          </p>
+
+          <div class="hero-stats" id="resumen">
+            <article>
+              <strong>USD 145.000</strong>
+              <span>Precio de venta</span>
+            </article>
+            <article>
+              <strong>108 m2</strong>
+              <span>Superficie cubierta</span>
+            </article>
+            <article>
+              <strong>50 m2</strong>
+              <span>Superficie semicubierta</span>
+            </article>
+            <article>
+              <strong>450 m2</strong>
+              <span>Terreno</span>
+            </article>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contacto">Solicitar información</a>
+            <a class="button button-secondary" href="#galeria">Ver fotos</a>
+          </div>
+        </div>
+
+        <aside class="contact-card" id="contacto">
+          <p class="contact-card-label">Información rápida</p>
+          <h2>Todo lo esencial, al primer vistazo</h2>
+          <ul class="feature-list">
+            <li>2 dormitorios más estudio o posible 3er dormitorio</li>
+            <li>1 baño completo más toilette</li>
+            <li>Galería cochera para 2 vehículos</li>
+            <li>Asador completo</li>
+            <li>Preinstalación de aire acondicionado</li>
+            <li>Preparada para domótica</li>
+          </ul>
+
+          <div class="contact-card-links">
+            <a class="button button-primary" href="mailto:cjcaram@gmail.com?subject=Consulta%20por%20casa%20en%20La%20Reserva%201">Enviar email</a>
+            <a class="button button-whatsapp" href="https://wa.me/543878303068?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20casa%20en%20La%20Reserva%201" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+
+          <dl class="contact-meta">
+            <div>
+              <dt>Ubicación</dt>
+              <dd>Ruta 9 km 1304, a 10 minutos del centro</dd>
+            </div>
+            <div>
+              <dt>Contacto</dt>
+              <dd>Cristian Caram</dd>
+            </div>
+            <div>
+              <dt>Teléfono</dt>
+              <dd><a href="tel:+543878303068">3878 303068</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:cjcaram@gmail.com">cjcaram@gmail.com</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
     </section>
 
-    <section class="gallery">
-      <h2>Galeria</h2>
-      <div class="photos">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_1.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_2.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_3.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_4.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_5.jpeg">
-        
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_11.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_12.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_13.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_14.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_15.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_16.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_17.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_18.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_19.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_20.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_21.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_22.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_23.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_24.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_25.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_26.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_27.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_28.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_29.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_30.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_31.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_32.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_33.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_34.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_35.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_36.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_37.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_38.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_39.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_40.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_41.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_42.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_43.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_44.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_45.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_46.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_47.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_48.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_49.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_50.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_6.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_7.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_8.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_9.jpeg">
-        <img src="https://raw.githubusercontent.com/cjcaram/assetForSale/refs/heads/main/images/_10.jpeg">
+    <section class="section section-highlights">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Resumen de la propiedad</p>
+          <h2>Información clara para que el comprador entienda el valor de inmediato</h2>
+          <p>
+            La página quedó pensada para mostrar primero lo que más ayuda a decidir: precio, superficies, distribución,
+            ubicación, equipamiento y acceso rápido al contacto.
+          </p>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="info-card">
+            <h3>Distribución funcional</h3>
+            <p>Acceso, estudio o dormitorio adicional, toilette, estar comedor, cocina, lavadero, tender y área privada bien resuelta.</p>
+          </article>
+          <article class="info-card">
+            <h3>Ubicación y entorno</h3>
+            <p>Emplazada en una lomada con excelentes visuales, dentro de un entorno residencial y a minutos del centro.</p>
+          </article>
+          <article class="info-card">
+            <h3>Exterior preparado</h3>
+            <p>Galería, cochera doble, asador completo y previsiones para sumar mejoras futuras como piscina.</p>
+          </article>
+          <article class="info-card">
+            <h3>Calidad constructiva</h3>
+            <p>Materiales de primera línea, buena aislación, instalaciones completas y previsiones técnicas valiosas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-specs" id="detalles">
+      <div class="container details-layout">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Detalles técnicos</p>
+            <h2>Terminaciones, instalaciones y equipamiento</h2>
+            <p>
+              Los datos técnicos se reorganizaron para que el visitante pueda revisar la propiedad por categorías, sin
+              tener que leer un bloque largo de texto corrido.
+            </p>
+          </div>
+
+          <div class="spec-grid">
+            <article class="spec-card">
+              <h3>Estructura</h3>
+              <p>Hormigón armado sismo resistente según CIRSOC 201, con sistema de bases, vigas encadenadas, columnas y losas.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Techo y aislación</h3>
+              <p>Chapa galvanizada con perfilería C y aislación térmica en lana de vidrio con aluminio bajo cubierta.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Mampostería</h3>
+              <p>Ladrillo cerámico hueco y bloques Brimax, con foco en comportamiento estructural, térmico y acústico.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Pisos y revestimientos</h3>
+              <p>Porcelanato San Lorenzo de primera calidad en áreas principales, cocina, lavadero y dormitorios.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Instalación sanitaria</h3>
+              <p>Sistema por termofusión, cisterna, tanque elevado, bomba automática y previsión para termotanque solar.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Electricidad</h3>
+              <p>Circuitos independientes, tablero embutido, materiales Kalop y canalización prevista para domótica.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Carpinterías</h3>
+              <p>Aberturas de aluminio prepintado negro y carpintería interior de madera con puertas placa marca Oblak.</p>
+            </article>
+            <article class="spec-card">
+              <h3>Equipamiento</h3>
+              <p>Termotanque eléctrico de 85 litros, anafe, horno y preinstalación embutida para equipos split.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="summary-panel">
+          <h3>Ficha rápida</h3>
+          <dl>
+            <div><dt>Country</dt><dd>La Reserva 1</dd></div>
+            <div><dt>Zona</dt><dd>Los Nogales</dd></div>
+            <div><dt>Lote</dt><dd>V03</dd></div>
+            <div><dt>Terreno</dt><dd>450 m2</dd></div>
+            <div><dt>Cubiertos</dt><dd>108 m2</dd></div>
+            <div><dt>Semicubiertos</dt><dd>50 m2</dd></div>
+            <div><dt>Cochera</dt><dd>2 vehículos</dd></div>
+            <div><dt>Estado</dt><dd>A estrenar</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-gallery" id="galeria">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Galería fotográfica</p>
+          <h2>Fotos fáciles de recorrer, ampliar y comparar</h2>
+          <p>
+            Cada imagen puede ampliarse en un visor con navegación por botones, teclado y miniaturas inferiores para
+            recorrer la propiedad con comodidad.
+          </p>
+        </div>
+
+        <div class="gallery-toolbar">
+          <button class="gallery-filter is-active" type="button" data-filter="all">Todas</button>
+          <button class="gallery-filter" type="button" data-filter="featured">Destacadas</button>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item featured" type="button" data-index="0"><img src="images/_1.jpeg" alt="Vista exterior frontal de la propiedad" loading="eager"></button>
+          <button class="gallery-item featured" type="button" data-index="1"><img src="images/_2.jpeg" alt="Vista exterior lateral de la propiedad" loading="eager"></button>
+          <button class="gallery-item featured" type="button" data-index="2"><img src="images/_3.jpeg" alt="Vista del acceso principal" loading="eager"></button>
+          <button class="gallery-item featured" type="button" data-index="3"><img src="images/_4.jpeg" alt="Vista general del frente de la propiedad" loading="lazy"></button>
+          <button class="gallery-item featured" type="button" data-index="4"><img src="images/_5.jpeg" alt="Vista de la casa y su entorno" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="5"><img src="images/_6.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="6"><img src="images/_7.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="7"><img src="images/_8.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="8"><img src="images/_9.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="9"><img src="images/_10.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="10"><img src="images/_11.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="11"><img src="images/_12.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="12"><img src="images/_13.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="13"><img src="images/_14.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="14"><img src="images/_15.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="15"><img src="images/_16.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="16"><img src="images/_17.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="17"><img src="images/_18.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="18"><img src="images/_19.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="19"><img src="images/_20.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="20"><img src="images/_21.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="21"><img src="images/_22.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="22"><img src="images/_23.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="23"><img src="images/_24.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="24"><img src="images/_25.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="25"><img src="images/_26.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="26"><img src="images/_27.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="27"><img src="images/_28.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="28"><img src="images/_29.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="29"><img src="images/_30.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="30"><img src="images/_31.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="31"><img src="images/_32.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="32"><img src="images/_33.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="33"><img src="images/_34.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="34"><img src="images/_35.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="35"><img src="images/_36.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="36"><img src="images/_37.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="37"><img src="images/_38.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="38"><img src="images/_39.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="39"><img src="images/_40.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="40"><img src="images/_41.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="41"><img src="images/_42.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="42"><img src="images/_43.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="43"><img src="images/_44.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="44"><img src="images/_45.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="45"><img src="images/_46.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="46"><img src="images/_47.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="47"><img src="images/_48.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="48"><img src="images/_49.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+          <button class="gallery-item" type="button" data-index="49"><img src="images/_50.jpeg" alt="Fotografía de la propiedad" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Coordiná una visita</p>
+          <h2>Una presentación más profesional para generar consultas más rápido</h2>
+          <p>
+            La página sigue siendo totalmente estática y compatible con GitHub Pages, pero ahora ofrece una experiencia
+            de venta mucho más clara, confiable y fácil de recorrer.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="button button-primary" href="mailto:cjcaram@gmail.com?subject=Consulta%20por%20visita%20a%20la%20propiedad">Escribir por email</a>
+          <a class="button button-secondary" href="tel:+543878303068">Llamar ahora</a>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>© 2025 Cristian Caram. Publicación estática para venta de propiedad.</p>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Cerrar galería">×</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Foto anterior">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption>
+        <span id="lightbox-caption">Imagen de la propiedad</span>
+        <span id="lightbox-counter"></span>
+      </figcaption>
+      <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+    </figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Foto siguiente">›</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
-<footer>
-  <p>&copy; 2025 Cristian Caram.</p>
-</footer>
 </html>
