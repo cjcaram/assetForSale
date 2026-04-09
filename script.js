@@ -1,5 +1,24 @@
-﻿const galleryItems = [...document.querySelectorAll(".gallery-item")];
-const filters = [...document.querySelectorAll(".gallery-filter")];
+﻿const driveImages = [
+  { id: "11E7g-qqMWzWTp9v6zwpkmEeugKUnNZh8", alt: "Vista del departamento" },
+  { id: "12fDPA_zkzHGM601xh7g1MUl6rfVaCoAC", alt: "Ambiente principal del departamento" },
+  { id: "1NT1mQ9gniM91VPbrqFugs-SZdDiVhqFm", alt: "Otro ángulo del interior" },
+  { id: "1n6bz780F8FeMRXtcwhGGZEE6iN6_TDH5", alt: "Detalle del ambiente principal" },
+  { id: "1zEXxOeXA1fp4cLx7kNjYFboPHn4NYmtg", alt: "Vista de cocina comedor" },
+  { id: "17iIrlZ1kmunpeKSHlZL9uWxl-f6cJmam", alt: "Detalle de la cocina" },
+  { id: "16b_rRt_gh0Z3yLNsApgVoie2rmHlIGDj", alt: "Dormitorio del departamento" },
+  { id: "15tHuBzucbRnwrH56359zCZA7cqvdprL1", alt: "Otro dormitorio o ambiente privado" },
+  { id: "1qkgPtT0tkBT7-W-w8erRtP0jVa482vk0", alt: "Baño completo" },
+  { id: "1L0i44Xf0x6SJ0-92ZXUT6E78JWSB4S7N", alt: "Segundo baño completo" },
+  { id: "15yYcwJ72cB2YvHFluOHFzjit_SBLDNCC", alt: "Balcón contrafrente" },
+  { id: "1EFvoLbIWW16lNUy1LphvGQTZYGDQ5QrX", alt: "Amenity o vista adicional del edificio" }
+].map((image, index) => ({
+  ...image,
+  index,
+  src: `https://drive.google.com/thumbnail?id=${image.id}&sz=w2000`
+}));
+
+const galleryGrid = document.getElementById("gallery-grid");
+const heroMedia = document.getElementById("hero-media");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxCaption = document.getElementById("lightbox-caption");
@@ -9,53 +28,40 @@ const closeButton = document.querySelector(".lightbox-close");
 const prevButton = document.querySelector(".lightbox-prev");
 const nextButton = document.querySelector(".lightbox-next");
 
-const imageData = galleryItems.map((item, index) => {
-  const image = item.querySelector("img");
-  return {
-    index,
-    src: image.src,
-    alt: image.alt || `Imagen ${index + 1} de la propiedad`,
-    featured: item.classList.contains("featured")
-  };
-});
+let currentIndex = 0;
 
-let visibleIndexes = imageData.map(({ index }) => index);
-let currentVisibleIndex = 0;
+function renderGallery() {
+  galleryGrid.innerHTML = "";
 
-function setActiveFilter(filter) {
-  filters.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.filter === filter);
+  driveImages.forEach((image) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "gallery-item";
+    button.dataset.index = String(image.index);
+    button.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+    button.addEventListener("click", () => openLightbox(image.index));
+    galleryGrid.appendChild(button);
   });
-
-  galleryItems.forEach((item) => {
-    const shouldShow = filter === "all" || item.classList.contains("featured");
-    item.classList.toggle("hidden", !shouldShow);
-  });
-
-  visibleIndexes = imageData
-    .filter((item) => filter === "all" || item.featured)
-    .map((item) => item.index);
 }
 
 function buildThumbs() {
   lightboxThumbs.innerHTML = "";
 
-  visibleIndexes.forEach((imageIndex) => {
-    const data = imageData[imageIndex];
+  driveImages.forEach((image) => {
     const thumbButton = document.createElement("button");
     thumbButton.type = "button";
     thumbButton.className = "lightbox-thumb";
-    thumbButton.dataset.index = String(imageIndex);
-    thumbButton.setAttribute("aria-label", `Abrir ${data.alt}`);
-    thumbButton.innerHTML = `<img src="${data.src}" alt="${data.alt}">`;
-    thumbButton.addEventListener("click", () => openLightboxByIndex(imageIndex));
+    thumbButton.dataset.index = String(image.index);
+    thumbButton.setAttribute("aria-label", `Abrir ${image.alt}`);
+    thumbButton.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+    thumbButton.addEventListener("click", () => openLightbox(image.index));
     lightboxThumbs.appendChild(thumbButton);
   });
 }
 
-function syncThumbs(activeIndex) {
+function syncThumbs() {
   [...lightboxThumbs.querySelectorAll(".lightbox-thumb")].forEach((thumb) => {
-    const isActive = Number(thumb.dataset.index) === activeIndex;
+    const isActive = Number(thumb.dataset.index) === currentIndex;
     thumb.classList.toggle("is-active", isActive);
     if (isActive) {
       thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
@@ -64,24 +70,16 @@ function syncThumbs(activeIndex) {
 }
 
 function renderLightbox() {
-  const realIndex = visibleIndexes[currentVisibleIndex];
-  const image = imageData[realIndex];
-
+  const image = driveImages[currentIndex];
   lightboxImage.src = image.src;
   lightboxImage.alt = image.alt;
   lightboxCaption.textContent = image.alt;
-  lightboxCounter.textContent = `${currentVisibleIndex + 1} / ${visibleIndexes.length}`;
-  syncThumbs(realIndex);
+  lightboxCounter.textContent = `${currentIndex + 1} / ${driveImages.length}`;
+  syncThumbs();
 }
 
-function openLightboxByIndex(index) {
-  const nextVisibleIndex = visibleIndexes.indexOf(index);
-  if (nextVisibleIndex === -1) {
-    return;
-  }
-
-  currentVisibleIndex = nextVisibleIndex;
-  buildThumbs();
+function openLightbox(index) {
+  currentIndex = index;
   renderLightbox();
   lightbox.classList.add("is-open");
   lightbox.setAttribute("aria-hidden", "false");
@@ -95,21 +93,13 @@ function closeLightbox() {
 }
 
 function stepLightbox(step) {
-  currentVisibleIndex = (currentVisibleIndex + step + visibleIndexes.length) % visibleIndexes.length;
+  currentIndex = (currentIndex + step + driveImages.length) % driveImages.length;
   renderLightbox();
 }
 
-galleryItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    openLightboxByIndex(Number(item.dataset.index));
-  });
-});
-
-filters.forEach((button) => {
-  button.addEventListener("click", () => {
-    setActiveFilter(button.dataset.filter);
-  });
-});
+heroMedia.style.backgroundImage = `url("${driveImages[0].src}")`;
+renderGallery();
+buildThumbs();
 
 closeButton.addEventListener("click", closeLightbox);
 prevButton.addEventListener("click", () => stepLightbox(-1));
@@ -138,5 +128,3 @@ document.addEventListener("keydown", (event) => {
     stepLightbox(1);
   }
 });
-
-setActiveFilter("all");
